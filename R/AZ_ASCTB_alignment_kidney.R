@@ -29,15 +29,15 @@ asctb_kidney_ct<-asctb_kidney[grepl("^CT.*ID$", c(colnames(asctb_kidney)), ignor
 #View(asctb_kidney_ct)
 #View(az_kidney_ct)
 
-head(asctb_kidney_ct)
-head(az_kidney_ct)
+#head(asctb_kidney_ct)
+#head(az_kidney_ct)
 
 #TP
-ncol(az_kidney_ct)
-nrow(az_kidney_ct)
+#ncol(az_kidney_ct)
+#nrow(az_kidney_ct)
 
-ncol(asctb_kidney_ct)
-nrow(asctb_kidney_ct)
+#ncol(asctb_kidney_ct)
+#nrow(asctb_kidney_ct)
 
 
 uq_as=unique(asctb_kidney_ct)
@@ -78,9 +78,9 @@ ct_in_superclass<-function(a){
 check_and_append_super_class_ct<-function(az_ini_row,az_colu){
   az_colu=az_colu-1
   while(az_colu>=1){
-    if(ct_in_superclass(uq_az[az_ini_row,az_colu])){}
+    if(ct_in_superclass(uq_az[az_ini_row,az_colu][[1]])){}
     else{
-      super_class_ct=append(super_class_ct,uq_az[az_ini_row,az_colu])
+      super_class_ct=append(super_class_ct,uq_az[az_ini_row,az_colu][[1]])
     }
     az_colu=az_colu-1
   }
@@ -135,15 +135,15 @@ while(az_colu>=1){
 }
 
 
-super_class_ct<-append(super_class_ct,1)
+#super_class_ct<-append(super_class_ct,1)
 
 az_as<-append(az_as,super_class_ct)
 az_as<-data.frame(unlist(az_as))
-
-View(az_as)
 colnames(az_as)<-"az_as"
+View(az_as)
 
-write.csv(az_as,"az_as_1.csv",row.names = FALSE)
+
+write.csv(az_as,"./Data/az_as.csv",row.names = FALSE)
 
 
 
