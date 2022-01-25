@@ -143,7 +143,7 @@ colnames(az_as)<-"az_as"
 View(az_as)
 
 
-write.csv(az_as,"./Data/az_as.csv",row.names = FALSE)
+write.csv(az_as,"./Data/cts_missing_in_asctb_kidney.csv",row.names = FALSE)
 
 
 

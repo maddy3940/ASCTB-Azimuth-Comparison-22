@@ -155,10 +155,10 @@ as_az<-data.frame(unlist(as_az))
 #super_class_ct
 
 
-colnames(as_az)<-"as_az"
+colnames(as_az)<-"cts_missing_in_az_kidney"
 #View(as_az)
 
-write.csv(as_az,"./Data/as_az.csv",row.names = FALSE)
+write.csv(as_az,"./Data/cts_missing_in_az_kidney.csv",row.names = FALSE)
 
 
 
