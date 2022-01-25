@@ -50,9 +50,8 @@ uq_az=unique(az_kidney_ct)
 
 #########################
 
-as_set<- unique(data.frame(name=c(t(uq_as),stringAsFactors=FALSE)))
-az_set<- unique(data.frame(name=c(t(uq_az),stringAsFactors=FALSE)))
-
+as_set<- unique(data.frame(name=c(t(uq_as))))
+az_set<- unique(data.frame(name=c(t(uq_az))))
 
 
 
