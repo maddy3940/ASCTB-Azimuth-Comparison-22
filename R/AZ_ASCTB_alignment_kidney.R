@@ -14,6 +14,16 @@ asctb_url<-json$references$asctb_url
 #Azimuth data
 az_kidney=read_csv(urls[1],skip=10)
 az_kidney_ct=az_kidney[grepl("ID", c(colnames(az_kidney)), ignore.case = T)]
+az_kidney_all_cts<-data.frame(name = c(t(az_kidney_ct)))
+
+
+az_kidney_label=az_kidney[grepl("^AS.*LABEL$", c(colnames(az_kidney)), ignore.case = T)]
+az_kidney_all_label<-data.frame(name = c(t(az_kidney_label)))
+
+az_kidney_all_cts_labels<-data.frame(az_kidney_all_cts,az_kidney_all_label)
+colnames(az_kidney_all_cts_labels)<-c("CT/ID","CT/LABEL")
+View(az_kidney_all_cts_labels)
+
 
 #ASCTB data
 asctb_kidney <- gsheet2tbl(asctb_url)
@@ -24,7 +34,28 @@ asctb_kidney <- asctb_kidney[10:nrow(asctb_kidney),]
 # Remove out the top row which was just the colnames
 colnames(asctb_kidney) <- asctb_kidney[1,]
 asctb_kidney <- as.data.frame(asctb_kidney[2:nrow(asctb_kidney),])
+
 asctb_kidney_ct<-asctb_kidney[grepl("^CT.*ID$", c(colnames(asctb_kidney)), ignore.case = T)]
+asctb_kidney_all_ct<-data.frame("CT/ID" = c(t(asctb_kidney_ct)))
+View(asctb_kidney_all_ct)
+
+asctb_kidney_label= asctb_kidney[grepl("^CT.*LABEL$", c(colnames(asctb_kidney)), ignore.case = T)]
+asctb_kidney_all_label<-data.frame("CT/LABEL" = c(t(asctb_kidney_label)))
+View(asctb_kidney_all_label)
+
+asctb_kidney_all_cts_labels<-data.frame(asctb_kidney_all_ct,asctb_kidney_all_label)
+colnames(asctb_kidney_all_cts_labels)<-c("CT/ID","CT/LABEL")
+View(asctb_kidney_all_cts_labels)
+
+#Unique
+#AZ
+az_kidney_all_cts_labels<-unique(az_kidney_all_cts_labels)
+View(az_kidney_all_cts_labels)
+
+#ASCTB
+asctb_kidney_all_cts_labels<-unique(asctb_kidney_all_cts_labels)
+View(asctb_kidney_all_cts_labels)
+
 
 #View(asctb_kidney_ct)
 #View(az_kidney_ct)
@@ -143,16 +174,19 @@ super_class_ct<-data.frame(unlist(super_class_ct))
 
 
 
-colnames(az_as)<-"cts_missing_in_asctb_kidney"
-colnames(super_class_ct)<-"cts_missing_in_asctb_kidney"
+colnames(az_as)<-"CT/ID"
+colnames(super_class_ct)<-"CT/ID"
 #View(az_as)
 #View(super_class_ct)
-
+View(az_kidney_all_cts_labels)
 az_as=setdiff(az_as,super_class_ct)
 #View(az_as)
 
+az_as_w_labels<-merge(x=az_as,y=az_kidney_all_cts_labels,by="CT/ID",all.x=TRUE)
+View(az_as_w_labels)
+View(az_as)
 
-write.csv(az_as,"./Data/cts_missing_in_asctb_kidney.csv",row.names = FALSE)
+write.csv(az_as_w_labels,"./Data/cts_missing_in_asctb_kidney.csv",row.names = FALSE)
 
 
 
