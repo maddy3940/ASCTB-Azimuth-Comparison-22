@@ -135,12 +135,21 @@ while(az_colu>=1){
 }
 
 
-#super_class_ct<-append(super_class_ct,1)
 
-az_as<-append(az_as,super_class_ct)
+#az_as<-append(az_as,super_class_ct)
 az_as<-data.frame(unlist(az_as))
-colnames(az_as)<-"az_as"
-View(az_as)
+super_class_ct<-append(super_class_ct,"1")
+super_class_ct<-data.frame(unlist(super_class_ct))
+
+
+
+colnames(az_as)<-"cts_missing_in_asctb_kidney"
+colnames(super_class_ct)<-"cts_missing_in_asctb_kidney"
+#View(az_as)
+#View(super_class_ct)
+
+az_as=setdiff(az_as,super_class_ct)
+#View(az_as)
 
 
 write.csv(az_as,"./Data/cts_missing_in_asctb_kidney.csv",row.names = FALSE)
