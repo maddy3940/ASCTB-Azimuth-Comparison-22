@@ -15,6 +15,8 @@ asctb_url<-json$references$asctb_url
 az_kidney=read_csv(urls[1],skip=10)
 az_kidney_ct=az_kidney[grepl("ID", c(colnames(az_kidney)), ignore.case = T)]
 az_kidney_all_cts<-data.frame(name = c(t(az_kidney_ct)))
+View(az_kidney)
+
 
 az_kidney_label=az_kidney[grepl("^AS.*LABEL$", c(colnames(az_kidney)), ignore.case = T)]
 az_kidney_all_label<-data.frame(name = c(t(az_kidney_label)))
