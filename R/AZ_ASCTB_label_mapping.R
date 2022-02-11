@@ -168,13 +168,10 @@ while(az_colu>=1){
   az_colu<-az_colu-1
 }
 
-
-
 #az_as<-append(az_as,super_class_ct)
 az_as<-data.frame(unlist(az_as))
 super_class_ct<-append(super_class_ct,"1")
 super_class_ct<-data.frame(unlist(super_class_ct))
-
 
 
 colnames(az_as)<-"CT/ID"
