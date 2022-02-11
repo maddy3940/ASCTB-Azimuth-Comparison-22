@@ -108,6 +108,29 @@ colnames(as_az_view_1) <- c("AZ_CT/LABEL","ASCTB_CT/LABEL","ASCTB_CT/ID","AZ_CT/
 as_az_view_1<-as_az_view_1[,c(3,4,2,1)]
 View(as_az_view_1)
 
+az_as_view_2<-az_as_view_1
+as_az_view_2<-as_az_view_1
+
+# AZ-ASCTB CT match
+x<-az_as_view_2$`AZ_CT/ID` == az_as_view_2$`ASCTB_CT/ID`
+x[is.na(x)]<-FALSE
+az_as_view_2["CT_match"]<-x
+az_as_view_2<-az_as_view_2[,c(1,2,5,3,4)]
+View(az_as_view_2)
+
+write.csv(az_as_view_2,"./Data/AZ_ASCTB_overview.csv",row.names = FALSE)
+
+
+# ASCTB - AZ CT match
+x<-as_az_view_2$`ASCTB_CT/ID` == as_az_view_2$`AZ_CT/ID`
+x[is.na(x)]<-FALSE
+as_az_view_2["CT_match"]<-x
+as_az_view_2<-as_az_view_2[,c(1,2,5,3,4)]
+View(as_az_view_2)
+write.csv(as_az_view_2,"./Data/ASCTB_AZ_overview.csv",row.names = FALSE)
+
+
+
 
 
 
