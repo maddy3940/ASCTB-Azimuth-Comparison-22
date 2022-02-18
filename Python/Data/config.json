@@ -1,0 +1,11 @@
+{
+  "references": [
+    {
+      "name": "kidney",
+      "url": "https://hubmapconsortium.github.io/asctb-azimuth-data-comparison/kidney.csv",  
+      "file_name":"kidney.csv",
+      "asctb_url":"https://docs.google.com/spreadsheets/d/1tK916JyG5ZSXW_cXfsyZnzXfjyoN-8B2GXLbYD6_vF0/edit#gid=2137043090"
+    }
+    
+  ]
+}
