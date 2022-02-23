@@ -1,0 +1,64 @@
+CT/ID,CT/LABEL
+CL:0000115,Endothelial
+CL:1001107,Ascending Thin Limb
+CL:0000738,Immune
+CL:1000768,Connecting Tubule
+CL:0005010,Intercalated
+CL:0005009,Principal
+CL:1001106,Thick Ascending Limb
+CL:0000359,Vascular Smooth Muscle / Pericyte
+CL:1001111,Descending Thin Limb
+CL:1000849,Distal Convoluted Tubule
+CL:0000057,Fibroblast
+CL:1000597,Papillary Tip Epithelial
+CL:1000452,Parietal Epithelial
+CL:0000653,Podocyte
+CL:0002306,Proximal Tubule
+CL:0002573,Schwann
+CL:1001096,Afferent / Efferent Arteriole Endothelial
+CL:1001131,Ascending Vasa Recta Endothelial
+CL:0000785,B
+CL:0000451,Classical Dendritic
+CL:0005011,Cortical Collecting Duct Intercalated Type A
+CL:1001431,Cortical Collecting Duct Principal
+[kidney loop of Henle cortical thick ascending limb epithelial cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/1001109),Cortical Thick Ascending Limb
+CL:0000359,Cortical Vascular Smooth Muscle / Pericyte
+CL:0000113,Cycling Mononuclear Phagocyte
+CL:1001111,Descending Thin Limb Type 1
+CL:1001111,Descending Thin Limb Type 2
+CL:1001111,Descending Thin Limb Type 3
+CL:1001285,Descending Vasa Recta Endothelial 
+CL:1001005,Glomerular Capillary Endothelial
+CL:1000547,Inner Medullary Collecting Duct
+CL:0002201,Intercalated Type B
+CL:0002138,Lymphatic Endothelial
+CL:0000235,M2 Macrophage
+CL:1000850,Macula Densa
+CL:0000097,Mast
+CL:0000057,Medullary Fibroblast
+CL:1001108,Medullary Thick Ascending Limb
+CL:0000650,Mesangial
+CL:0000576,Monocyte-derived
+CL:0000542,Natural Killer T
+CL:0000775,Neutrophil
+CL:0000576,Non-classical monocyte
+Outer Medullary Collecting Duct Intercalated Type A,Outer Medullary Collecting Duct Intercalated Type A
+Outer Medullary Collecting Duct Principal,Outer Medullary Collecting Duct Principal
+Papillary Tip Epithelial,Papillary Tip Epithelial
+Parietal Epithelial,Parietal Epithelial
+Peritubular Capilary Endothelial ,Peritubular Capilary Endothelial 
+CL:0000786,Plasma
+CL:0000784,Plasmacytoid Dendritic
+CL:0002306,Proximal Tubule Epithelial Segment 1
+CL:0002306,Proximal Tubule Epithelial Segment 2
+CL:0002306,Proximal Tubule Epithelial Segment 3
+CL:0000648,Renin-positive Juxtaglomerular Granular
+CL:0002573,Schwann / Neural
+CL:000084,T
+CL:0005011,Connecting Tubule Intercalated Type A
+CL:1001431,Connecting Tubule Principal
+CL:1000849,Distal Convoluted Tubule Type 1
+CL:1000849,Distal Convoluted Tubule Type 2
+CL:1000717,Outer Medullary Collecting Duct Intercalated Type A
+CL:1000716,Outer Medullary Collecting Duct Principal
+CL:1001033,Peritubular Capilary Endothelial 
