@@ -5,7 +5,7 @@
       "name": "lung",
       "url": "https://hubmapconsortium.github.io/asctb-azimuth-data-comparison/lung.csv",
       "organ_name":"lung",
-      "asctb_sheet_name":"Lung_v.1.1"
+      "asctb_sheet_name":"Lung_v1.1"
     },
     {
       "name": "pancreas",
@@ -36,13 +36,6 @@
       "url": "https://hubmapconsortium.github.io/asctb-azimuth-data-comparison/pbmc.csv",  
       "organ_name":"blood_pmbc",
       "asctb_sheet_name":"Blood_v1.1"
-    },
-    {
-      "name": "spleen",
-      "url": "https://hubmapconsortium.github.io/asctb-azimuth-data-comparison/spleen.csv",  
-      "organ_name":"spleen",
-      "asctb_sheet_name":"Spleen_v1.1"
-    }
-    
+    }    
   ]
 }
