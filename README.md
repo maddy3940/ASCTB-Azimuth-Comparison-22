@@ -3,23 +3,25 @@
 This repository contains code and final comparison reports for ASCT+B and Azimuth tables. Details for each organ as well as the overall summary can be found [here](https://github.com/maddy3940/ASCTB-Azimuth-Comparison-22/tree/main/Python/Data/Final)
 
 
-In the xlsx file for each organ there are following sheets- 
+In the xlsx file for each organ, following sheets are present- 
 
 
-Az_missing_cts: This sheet contains the rows from Azimuth organ tables where CT/ID is not present but CT/LABEL (RDFS:Label from the source ontology) is present.
-             Columns - CT/ID - Aziuth CT/ID (Here this cell would be NULL as the CTs are missing)
+Az_missing_cts: This sheet contains the rows from Azimuth organ tables where CT/ID is not present but CT/LABEL (RDFS: Label from the source ontology) is present.
+             
+             Columns - CT/ID - Azimuth CT/ID (Here this cell would be NULL as the CTs are missing)
                        CT/LABEL - Azimuth CT/LABEL (CT ontology label)
 
 
-Asctb_missing_cts: This sheet contains rows from ASCT+B organ tables where CT/ID is not present but CT/LABEL (RDFS:Label from the source ontology) is present.
+Asctb_missing_cts: This sheet contains rows from ASCT+B organ tables where CT/ID is not present but CT/LABEL (RDFS: Label from the source ontology) is present.
+             
              Columns - CT/ID - ASCT+B CT/ID (Here this cell would be NULL as the CTs are missing)
                        CT/LABEL - Azimuth CT/LABEL (RDFS:Label from the source ontology)
 
-* Hence forth all the reference to CT/LABEL means RDFS:Label from the source ontology for both Azimuth and ASCT+B
+* Henceforth all the reference to CT/LABEL means RDFS: Label from the source ontology for both Azimuth and ASCT+B
 
-Az_Asctb_cts_perfect_matches: This sheet contains the Azimuth CT/ID and CT/LABEL and ASCT+B CT/ID and CT/LABEL that are present in both that tables. The method used to determine this was as follows- 
-              Pick all CT/ID (one by one) from Azmiuth and see if its present in ASCT+B table in every level of hierarchy.
-              
+Az_Asctb_cts_perfect_matches: This sheet contains the Azimuth CT/ID and CT/LABEL and ASCT+B CT/ID and CT/LABEL that are present in both the tables. The method used to determine this was as follows- 
+Pick all CT/ID (one by one) from Azmiuth and see if its present in ASCT+B table in every level of hierarchy.
+            
               Columns - AZ.CT/ID - CT/ID found in Azimuth table.
                        AZ.CT/LABEL - Azimuth CT/LABEL associated with that CT/ID
                         ASCTB.CT/ID - CT/ID found in ASCT+B table.
@@ -60,11 +62,13 @@ Asctb_match_tree_crosswalk: This sheet contains details on all Asctb CTs that ar
                        
                        
 Asctb_cts_mismatch_final: This sheet contains all the CTs in ASCTB for which a match could not be found in Azimuth even after recursive parent matching (as mentioned before). These CTs can be looked upon to be included in the Azimuth tables.
+              
               Columns- ASCTB.CT/ID - The correct ASCTB CT/ID that is not present in Azimuth table even after recursive parent matching
                        ASCTB.CT/LABEL - Label associated with that CT/ID in ASCTB
  
  
 Az_cts_mismatch_final: This sheet contains all the CTs in Azimuth for which a match could not be found in Asctb even after recursive parent matching (as mentioned before). These CTs can be looked upon to be included in the ASCTB tables.
+              
               Columns- ASCTB.CT/ID - The correct ASCTB CT/ID that is not present in Azimuth table even after recursive parent matching
                        ASCTB.CT/LABEL - Label associated with that CT/ID in ASCTB
  
