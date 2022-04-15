@@ -2,8 +2,8 @@
 
 This repository contains code and final comparison reports for ASCT+B and Azimuth tables. Details for each organ as well as the overall summary can be found [here](https://github.com/maddy3940/ASCTB-Azimuth-Comparison-22/tree/main/Python/Data/Final)
 
+![ASCT+B Azimuth Alignment - Frame 1](https://user-images.githubusercontent.com/44323045/163524492-d2058f1f-a442-4299-872f-e7bd02b82dc3.jpg)
 
-![ASCT+B Azimuth Alignment - Frame 1](https://user-images.githubusercontent.com/44323045/163524076-dd977467-f58e-489a-85ff-4dc4d9165784.jpg)
 
 
 In the xlsx file for each organ, following sheets are present- 
