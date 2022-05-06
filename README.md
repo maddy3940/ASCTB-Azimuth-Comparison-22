@@ -3,7 +3,10 @@
 This repository contains code and final comparison reports for ASCT+B and Azimuth tables. Details for each organ as well as the overall summary can be found [here](https://github.com/maddy3940/ASCTB-Azimuth-Comparison-22/tree/main/Python/Data/Final)
 
 
-![1](https://user-images.githubusercontent.com/44323045/163759841-bfdaadee-e7f1-4ec5-b25c-f52d0e3b1029.JPG)
+![AzimuthToASCT+B](https://user-images.githubusercontent.com/44323045/167049772-a7bd3ac7-ede0-46eb-b67a-486aa06d291f.jpg)
+
+
+Detailed documentation for this pipeline can be found [here](https://github.com/maddy3940/ASCTB-Azimuth-Comparison-22/blob/main/Python/ASCTB_Azimuth_Comparison_document_final.pdf).
 
 In the xlsx file for each organ, following sheets are present- 
 
@@ -73,6 +76,15 @@ Az_cts_mismatch_final: This sheet contains all the CTs in Azimuth for which a ma
               
               Columns- ASCTB.CT/ID - The correct ASCTB CT/ID that is not present in Azimuth table even after recursive parent matching
                        ASCTB.CT/LABEL - Label associated with that CT/ID in ASCTB
+ 
+ 
+ 
+ Final matches: This sheet contains the CT Labels for Azimuth and ASCT+B that are matched via one to one match (perfect match) or crosswalk match.
+ 
+               Columns- AZ.CT/LABEL - Azimuth CT LABEL 
+                       ASCTB.CT/LABEL - ASCT+B CT LABEL
+ 
+ 
  
  
  
